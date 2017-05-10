@@ -8,6 +8,7 @@ from .models.animal_type import AnimalType
 
 from .model_admins.company import CompanyAdmin
 from .model_admins.farm import FarmAdmin
+from .model_admins.yields import MilkYieldAdmin, MilkYield
 from django.contrib.auth.models import User, Group
 
 # from .model_admins.user import UserAdmin
@@ -20,7 +21,7 @@ admin.site.register(Company, CompanyAdmin)
 admin.site.register(Farm, FarmAdmin)
 admin.site.register(AnimalType)
 admin.site.register(Animal)
-
+admin.site.register(MilkYield, MilkYieldAdmin)
 
 
 # Register your models here.

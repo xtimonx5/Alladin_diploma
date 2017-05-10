@@ -11,3 +11,5 @@ class Animal(models.Model):
     date_of_last_sex = models.DateField()
     current_weight = models.IntegerField()
 
+    def __str__(self):
+        return self.type.name + ' ' + str(self.id)

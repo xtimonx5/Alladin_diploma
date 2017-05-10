@@ -4,12 +4,42 @@ from django.forms import ModelForm
 from management.models.company import Company
 from management.models.farm import Farm
 from management.models.animal import Animal
+from management.models.statistics.milk_yield import MilkYield
 from django.contrib.admin import TabularInline, StackedInline
 
 
 class AnimalInline(TabularInline):
     model = Animal
     extra = 0
+
+    def yields_sum(self, obj):
+        yield_objs = MilkYield.objects.filter(animal=obj)
+        sum = 0
+        for item in yield_objs:
+            sum += item.weight
+        return sum if yield_objs.exists() else '-'
+
+    def yields_percent(self,obj):
+        yield_objs = MilkYield.objects.filter(animal=obj)
+        sum = 0.0
+        for item in yield_objs:
+            sum += item.weight
+        return sum/yield_objs.count() if yield_objs.exists() else '-'
+
+    readonly_fields = (
+        'yields_sum',
+        'yields_percent'
+    )
+
+    fields = (
+        'type',
+        'name',
+        'date_of_birth',
+        'date_of_last_sex',
+        'current_weight',
+        'yields_sum',
+        'yields_percent'
+    )
 
     def has_add_permission(self, request):
         return True
@@ -63,6 +93,9 @@ class FarmAdmin(ModelAdmin):
 
     def has_add_permission(self, request):
         return True
+
+
+
 
     def has_change_permission(self, request, obj=None):
         return True

@@ -6,7 +6,7 @@ from ..animal import Animal
 class MilkYield(models.Model):
     date = models.DateField()
     weight = models.IntegerField()
-    animal = models.ForeignKey(Animal)
+    animal = models.ForeignKey(Animal, related_name='yields')
 
     # For monthly yield
     fat_content = models.IntegerField(null=True, blank=True)
