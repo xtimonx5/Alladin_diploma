@@ -60,6 +60,11 @@ class CompanyAdmin(ModelAdmin):
         else:
             return super(CompanyAdmin, self).changelist_view(request, extra_context)
 
+    def farm_count(self, obj):
+        return Farm.objects.filter(company=obj).count()
+
+    list_display = ('name', 'farm_count')
+
     # def get_list_display(self, request):
     #     if request.user.is_superuser:
     #         return super(CompanyAdmin, self).get_list_display(request)

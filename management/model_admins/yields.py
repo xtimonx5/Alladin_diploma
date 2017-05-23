@@ -23,7 +23,13 @@ class MilkYieldAdmin(ModelAdmin):
     def has_delete_permission(self, request, obj=None):
         return True
 
-    list_display = ('date', 'animal')
+    def farm(self, obj):
+        return obj.animal.farm.name
+
+    def company(self, obj):
+        return obj.animal.farm.company.name
+
+    list_display = ('company','farm', 'date', 'animal', 'weight', )
 
     # filter_horizontal = True
     list_filter = ('animal', 'date',)

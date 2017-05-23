@@ -1,6 +1,7 @@
 from django.db import models
 from .animal_type import AnimalType
 from .farm import Farm
+from .farm_group import FarmGroup
 
 
 class Animal(models.Model):
@@ -10,6 +11,7 @@ class Animal(models.Model):
     date_of_birth = models.DateField()
     date_of_last_sex = models.DateField()
     current_weight = models.IntegerField()
+    group = models.ForeignKey(FarmGroup)
 
     def __str__(self):
         return self.type.name + ' ' + str(self.id)

@@ -259,6 +259,7 @@ class FarmAdmin(ModelAdmin):
                                      )
                                 })
 
+
     fieldsets = (
         fieldset_info,
         fieldset_needs
