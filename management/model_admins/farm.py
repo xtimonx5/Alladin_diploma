@@ -10,7 +10,20 @@ from django.contrib.admin import TabularInline, StackedInline
 
 class AnimalInline(TabularInline):
     model = Animal
-    extra = 0
+    extra = 1
+    # classes = ('grp-collapse grp-closed',)
+
+    def has_module_permission(self, request):
+        return True
+
+    def has_add_permission(self, request):
+        return True
+
+    def has_change_permission(self, request, obj=None):
+        return True
+
+    def has_delete_permission(self, request, obj=None):
+        return True
 
     def yields_sum(self, obj):
         yield_objs = MilkYield.objects.filter(animal=obj)
@@ -33,6 +46,7 @@ class AnimalInline(TabularInline):
 
     fields = (
         'type',
+        'group',
         'name',
         'date_of_birth',
         'date_of_last_sex',
@@ -41,14 +55,6 @@ class AnimalInline(TabularInline):
         'yields_percent'
     )
 
-    def has_add_permission(self, request):
-        return True
-
-    def has_change_permission(self, request, obj=None):
-        return True
-
-    def has_delete_permission(self, request, obj=None):
-        return True
 
 
 class FarmAdmin(ModelAdmin):
@@ -258,7 +264,6 @@ class FarmAdmin(ModelAdmin):
                                      'vit_a_needs',
                                      )
                                 })
-
 
     fieldsets = (
         fieldset_info,

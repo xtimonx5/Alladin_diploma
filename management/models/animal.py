@@ -9,9 +9,9 @@ class Animal(models.Model):
     name = models.CharField(max_length=50)
     farm = models.ForeignKey(Farm)
     date_of_birth = models.DateField()
-    date_of_last_sex = models.DateField()
+    date_of_last_sex = models.DateField( null=True,blank=True)
     current_weight = models.IntegerField()
-    group = models.ForeignKey(FarmGroup)
+    group = models.ForeignKey(FarmGroup, null=True,blank=True)
 
     def __str__(self):
         return self.type.name + ' ' + str(self.id)
