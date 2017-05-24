@@ -4,7 +4,7 @@ from django.db import models
 class Norm(models.Model):
     name = models.CharField(max_length=100)
     calorie = models.IntegerField()
-
+    animal_type = models.ForeignKey('AnimalType')
     krahmal = models.IntegerField(null=True, blank=True, default=0)
     sugar = models.IntegerField(null=True, blank=True, default=0)
     calcii = models.IntegerField(null=True, blank=True, default=0)
