@@ -4,7 +4,7 @@ nohup.out
 
 ### Git ###
 *.orig
-
+db.sqlite3
 
 #!! ERROR: ipythonnotebook is undefined. Use list command to see defined gitignore types !!#
 
