@@ -10,8 +10,7 @@ from django.contrib.admin import TabularInline, StackedInline
 
 class AnimalInline(TabularInline):
     model = Animal
-    extra = 1
-    # classes = ('grp-collapse grp-closed',)
+    extra = 0
 
     def has_module_permission(self, request):
         return True
@@ -54,7 +53,6 @@ class AnimalInline(TabularInline):
         'yields_sum',
         'yields_percent'
     )
-
 
 
 class FarmAdmin(ModelAdmin):
@@ -239,7 +237,7 @@ class FarmAdmin(ModelAdmin):
     #     'krahmal_needs',
     #     'name',
     # )
-    fieldset_info = ('Standart_info', {'fields':
+    fieldset_info = ('Standart Info', {'fields':
                                            ('company', 'name')
                                        })
 

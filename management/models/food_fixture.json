@@ -1,0 +1,54 @@
+[
+  {
+    "model": "management.food",
+    "pk": 1,
+    "fields": {
+      "name": "seno",
+      "calorie": 1000,
+      "krahmal": 4,
+      "sugar": 4,
+      "calcii": 3,
+      "fosfor": 3,
+      "magnie": 2,
+      "cali": 2,
+      "sera": 4,
+      "jelezo": 5,
+      "med": 3,
+      "cink": 3,
+      "marganec": 2,
+      "kobalt": 8,
+      "iod": 6,
+      "karotin": 5,
+      "vit_e": 2,
+      "vit_d": 2,
+      "vit_a": 4,
+      "cost": 5
+    }
+  },
+  {
+    "model": "management.food",
+    "pk": 2,
+    "fields": {
+      "name": "hueno",
+      "calorie": 2000,
+      "krahmal": 5,
+      "sugar": 4,
+      "calcii": 67,
+      "fosfor": 4,
+      "magnie": 3,
+      "cali": 2,
+      "sera": 6,
+      "jelezo": 5,
+      "med": 3,
+      "cink": 3,
+      "marganec": 2,
+      "kobalt": 8,
+      "iod": 6,
+      "karotin": 5,
+      "vit_e": 2,
+      "vit_d": 2,
+      "vit_a": 4,
+      "cost": 5
+    }
+  }
+]

@@ -6,4 +6,4 @@ class FarmGroup(models.Model):
     farm = models.ForeignKey('Farm')
 
     def __str__(self):
-        return self.name
+        return self.farm.name + '/' + self.name
