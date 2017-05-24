@@ -5,9 +5,9 @@ class Food(models.Model):
     name = models.CharField(max_length=100)
 
     сorm = models.FloatField(verbose_name='Корм')
-    calorie = models.FloatField(verbose_name='Обмен энергией КРС')
-    calorie_с = models.FloatField(verbose_name='Обмен энергией С')
-    calorie_o = models.FloatField(verbose_name='Обмен энергией O')
+    calorie = models.FloatField(verbose_name='Обмен энергией КРС', null=True, blank=True)
+    calorie_с = models.FloatField(verbose_name='Обмен энергией С', null=True, blank=True)
+    calorie_o = models.FloatField(verbose_name='Обмен энергией O', null=True, blank=True)
     suh_veschestvo = models.FloatField(null=True, blank=True, default=0, verbose_name='Сухое вещество')
     Siro_proteine = models.FloatField(null=True, blank=True, default=0, verbose_name='Сырой протеин')
     Perev_proteine = models.FloatField(null=True, blank=True, default=0, verbose_name='Переваренный протеин')
