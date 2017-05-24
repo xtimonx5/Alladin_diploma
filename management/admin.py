@@ -15,7 +15,7 @@ from .models.food import Food
 from .model_admins.food import FoodAdmin
 from .models import FarmGroup
 # from .models.farm_group import FarmGroup
-
+from .models import Norm
 # TODO: add groups
 admin.site.unregister(Group)
 
@@ -26,5 +26,6 @@ admin.site.register(AnimalType)
 admin.site.register(Animal)
 admin.site.register(MilkYield, MilkYieldAdmin)
 admin.site.register(Food, FoodAdmin)
+admin.site.register(Norm, FoodAdmin)
 admin.site.register(FarmGroup, FarmGroupAdmin)
-# Register your models here.
+
