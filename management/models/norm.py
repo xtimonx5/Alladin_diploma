@@ -9,7 +9,7 @@ class Norm(models.Model):
     calorie = models.IntegerField()
     suh_veschestvo = models.IntegerField(null=True,blank=True, default=0)
     Siro_proteine = models.IntegerField(null=True,blank=True, default=0)
-    Perev_proteine = models.IntegerField(null=True,blank=True, default=0)
+    Perev_proteine = models.IntegerField(null=True,blank=True, default=0, verbose_name='Переваренный протеин')
     sir_jir = models.IntegerField(null=True,blank=True, default=0)
     sir_cletchatka = models.IntegerField(null=True,blank=True, default=0, verbose_name='Сыр клетчатка')
     sol = models.IntegerField(null=True,blank=True, default=0, verbose_name='Соль')
