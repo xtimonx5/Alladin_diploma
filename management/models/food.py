@@ -1,9 +1,11 @@
+# -*- coding: utf-8 -*-
+
+
 from django.db import models
 
 
 class Food(models.Model):
     name = models.CharField(max_length=100)
-
     сorm = models.FloatField(verbose_name='Корм')
     calorie = models.FloatField(verbose_name='Обмен энергией КРС', null=True, blank=True)
     calorie_с = models.FloatField(verbose_name='Обмен энергией С', null=True, blank=True)

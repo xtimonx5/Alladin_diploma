@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'suit',
+    'smart_selects',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,6 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'management',
 ]
+SMART_SELECTS_JQUERY_URL = True
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

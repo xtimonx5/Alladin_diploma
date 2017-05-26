@@ -1,0 +1,52 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_static %}
+
+{% block extrastyle %}
+    {{ block.super }}
+{% endblock %}
+
+{% block coltype %}colMS{% endblock %}
+<script type="text/javascript" src="http://localhost/acrilart/javascript/jquery-1.6.4.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        function onChangeFarm() {
+            alert('aaa')
+        }
+
+        $("#parent").on('change', onChangeFarm)
+    });
+
+</script>
+{% include 'suit/menu.html' %}
+
+{% block bodyclass %}dashboard{% endblock %}
+{% block content %}
+    <div id="content-main">
+        <legend>Company name: {{ company.name }}</legend>
+        <label for="parent">Parent</label>
+        <a href="/rasschet">Again</a>
+        <form action="">
+
+            <select id="parent" name="parent" value="{{ farm.id }}"
+            {% if groups %}
+                disabled
+                    {% endif %}>
+            {% for farm in farms %}
+                <option value="{{ farm.id }}">{{ farm.name }}</option>
+            {% endfor %}
+            </select>
+        {% if groups %}
+        <select id="group" name="group"" value="{{ group.id }}">
+            {% for group in groups %}
+                <option value="{{ group.id }}">{{ group.name }}</option>
+            {% endfor %}
+            </select>
+    {% endif %}
+<button type="submit"> Go</button>
+        </form>
+
+
+    </div>
+
+{% endblock %}
+
