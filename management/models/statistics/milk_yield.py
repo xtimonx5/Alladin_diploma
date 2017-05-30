@@ -12,3 +12,6 @@ class MilkYield(models.Model):
     fat_content = models.IntegerField(null=True, blank=True)
     protein_content = models.IntegerField(null=True, blank=True)
 
+    class Meta:
+        verbose_name = 'Удой молока'
+        verbose_name_plural = 'Удои молока'

@@ -8,3 +8,7 @@ class FarmGroup(models.Model):
 
     def __str__(self):
         return self.farm.name + '/' + self.name
+
+    class Meta:
+        verbose_name = 'Группа'
+        verbose_name_plural = 'Группы'

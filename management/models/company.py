@@ -27,8 +27,8 @@ class Company(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = 'Company'
-        verbose_name_plural = 'Company'
+        verbose_name = 'Компания'
+        verbose_name_plural = 'Компании'
 
 
 post_save.connect(Company.post_save_from_user, sender=User)

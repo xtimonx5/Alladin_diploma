@@ -1,0 +1,40 @@
+{% autoescape off %}
+
+
+<table border="1">
+   <tr>
+    <th>В рационе содержится</th>
+    <th>Рацион</th>
+    <th>Норма</th>
+    <th>Баланс</th>
+    <th>%</th>
+   </tr>
+    <tr><td>Корм ед</td><td>{{ corm.racion }}</td><td>{{ corm.norm }}</td><td>{{ corm.balance }}</td><td>{{ corm.percent }}</td></tr>
+    <tr><td>Обмен.энерг., МДж</td><td>{{ obmen_energ.racion }}</td><td>{{ obmen_energ.norm }}</td><td>{{ obmen_energ.balance }}</td><td>{{ obmen_energ.percent }}</td></tr>
+    <tr><td>Сухое в-во, кг</td><td>{{ suh_veschescto.racion }}</td><td>{{ suh_veschescto.norm }}</td><td>{{ suh_veschescto.balance }}</td><td>{{ suh_veschescto.percent }}</td></tr>
+    <tr><td>Сырой протеин,г</td><td>{{ sir_proteine.racion }}</td><td>{{ sir_proteine.norm }}</td><td>{{ sir_proteine.balance }}</td><td>{{ sir_proteine.percent }}</td></tr>
+    <tr><td>Перев.протеин, г</td><td>{{ perev_proteine.racion }}</td><td>{{ perev_proteine.norm }}</td><td>{{ perev_proteine.balance }}</td><td>{{ perev_proteine.percent }}</td></tr>
+    <tr><td>Сыр. жир, г</td><td>{{ sir_jir.racion }}</td><td>{{ sir_jir.norm }}</td><td>{{ sir_jir.balance }}</td><td>{{ sir_jir.percent }}</td></tr>
+    <tr><td>Сыр.клетчатка,г</td><td>{{ sir_cletchatka.racion }}</td><td>{{ sir_cletchatka.norm }}</td><td>{{ sir_cletchatka.balance }}</td><td>{{ sir_cletchatka.percent }}</td></tr>
+    <tr><td>Крахмал,г</td><td>{{ krahmal.racion }}</td><td>{{ krahmal.norm }}</td><td>{{ krahmal.balance }}</td><td>{{ krahmal.percent }}</td></tr>
+    <tr><td>Сахар,г</td><td>{{ sugar.racion }}</td><td>{{ sugar.norm }}</td><td>{{ sugar.balance }}</td><td>{{ sugar.percent }}</td></tr>
+    <tr><td>Соль пвар., г</td><td>{{ sol.racion }}</td><td>{{ sol.norm }}</td><td>{{ sol.balance }}</td><td>{{ sol.percent }}</td></tr>
+    <tr><td>Кальций,г</td><td>{{ calci.racion }}</td><td>{{ calci.norm }}</td><td>{{ calci.balance }}</td><td>{{ calci.percent }}</td></tr>
+    <tr><td>Фосфор,г</td><td>{{ fosfor.racion }}</td><td>{{ fosfor.norm }}</td><td>{{ fosfor.balance }}</td><td>{{ fosfor.percent }}</td></tr>
+    <tr><td>Магний,г</td><td>{{ magnie.racion }}</td><td>{{ magnie.norm }}</td><td>{{ magnie.balance }}</td><td>{{ magnie.percent }}</td></tr>
+    <tr><td>Калий,г</td><td>{{ cali.racion }}</td><td>{{ cali.norm }}</td><td>{{ cali.balance }}</td><td>{{ cali.percent }}</td></tr>
+    <tr><td>Сера,г</td><td>{{ sera.racion }}</td><td>{{ sera.norm }}</td><td>{{ sera.balance }}</td><td>{{ sera.percent }}</td></tr>
+    <tr><td>Железо, мг</td><td>{{ jelezo.racion }}</td><td>{{ jelezo.norm }}</td><td>{{ jelezo.balance }}</td><td>{{ jelezo.percent }}</td></tr>
+    <tr><td>Натрий, г</td><td>{{ natrie.racion }}</td><td>{{ natrie.norm }}</td><td>{{ natrie.balance }}</td><td>{{ natrie.percent }}</td></tr>
+    <tr><td>Медь, мг</td><td>{{ med.racion }}</td><td>{{ med.norm }}</td><td>{{ med.balance }}</td><td>{{ med.percent }}</td></tr>
+    <tr><td>Цинк, мг</td><td>{{ cink.racion }}</td><td>{{ cink.norm }}</td><td>{{ cink.balance }}</td><td>{{ cink.percent }}</td></tr>
+    <tr><td>Марганец, мг</td><td>{{ marganec.racion }}</td><td>{{ marganec.norm }}</td><td>{{ marganec.balance }}</td><td>{{ marganec.percent }}</td></tr>
+    <tr><td>Кобальт, мг</td><td>{{ kobalt.racion }}</td><td>{{ kobalt.norm }}</td><td>{{ kobalt.balance }}</td><td>{{ kobalt.percent }}</td></tr>
+    <tr><td>Йод, мг</td><td>{{ iod.racion }}</td><td>{{ iod.norm }}</td><td>{{ iod.balance }}</td><td>{{ iod.percent }}</td></tr>
+    <tr><td>Каротин, мг</td><td>{{ karotin.racion }}</td><td>{{ karotin.norm }}</td><td>{{ karotin.balance }}</td><td>{{ karotin.percent }}</td></tr>
+    <tr><td>Вит. Д, МЕ</td><td>{{ vit_d.racion }}</td><td>{{ vit_d.norm }}</td><td>{{ vit_d.balance }}</td><td>{{ vit_d.percent }}</td></tr>
+    <tr><td>Вит. Е, мг</td><td>{{ vit_e.racion }}</td><td>{{ vit_e.norm }}</td><td>{{ vit_e.balance }}</td><td>{{ vit_e.percent }}</td></tr>
+    <tr><td>Вит.А, тыс./ МЕ</td><td>{{ vit_a.racion }}</td><td>{{ vit_a.norm }}</td><td>{{ vit_a.balance }}</td><td>{{ vit_a.percent }}</td></tr>
+  </table>
+
+{% endautoescape %}

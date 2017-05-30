@@ -5,7 +5,7 @@ class Norm(models.Model):
     name = models.CharField(max_length=100)
     animal_type = models.ForeignKey('AnimalType')
     # norms
-    сorm = models.FloatField(verbose_name='Корм')
+    corm = models.FloatField(verbose_name='Корм')
     calorie = models.FloatField(verbose_name='Обмен энергией')
     suh_veschestvo = models.FloatField(null=True,blank=True, default=0, verbose_name='Сухое вещество')
     Siro_proteine = models.FloatField(null=True,blank=True, default=0,verbose_name='Сырой протеин')
@@ -37,3 +37,7 @@ class Norm(models.Model):
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name = 'Норма'
+        verbose_name_plural = 'Нормы'

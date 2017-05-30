@@ -29,3 +29,7 @@ class AnimalType(models.Model):
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name = 'Тип животного'
+        verbose_name_plural = 'Типы животных'

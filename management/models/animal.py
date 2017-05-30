@@ -22,3 +22,7 @@ class Animal(models.Model):
 
     def __str__(self):
         return self.type.name + ' ' + str(self.id)
+
+    class Meta:
+        verbose_name = 'Животное'
+        verbose_name_plural = 'Животные'
