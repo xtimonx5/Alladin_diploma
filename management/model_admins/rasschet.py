@@ -20,6 +20,7 @@ class FoodInline(TabularInline):
         all = 0
         for item in all_calorie:
             all += item.food.calorie * item.count
+
         return str(current_calorie / all * 100) + '%'
 
     readonly_fields = ('percent',)
@@ -44,16 +45,16 @@ class RasschetAdmin(ModelAdmin):
         value = 0
         for item in all_foods:
             value += getattr(item.food, field_value) * item.count
-        return value
+        return round(value, 2)
 
     @staticmethod
     def get_balance(obj, field_value):
-        return RasschetAdmin.get_racion(obj, field_value) - getattr(obj.norm, field_value)
+        return round(RasschetAdmin.get_racion(obj, field_value) - getattr(obj.norm, field_value))
 
     @staticmethod
     def get_percent(obj, field_value):
         try:
-            return str(RasschetAdmin.get_balance(obj, field_value) * 100 / getattr(obj.norm, field_value)) + '%'
+            return str(round(RasschetAdmin.get_balance(obj, field_value) * 100 / getattr(obj.norm, field_value),2)) + '%'
         except:
             return '0 %'
 

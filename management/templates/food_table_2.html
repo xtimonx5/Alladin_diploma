@@ -1,0 +1,65 @@
+{% autoescape off %}
+
+
+<table border="2" style=" text-align: center">
+   <tr>
+       <th>Названия</th>
+       <th>Январь</th>
+       <th>Февраль</th>
+       <th>Март</th>
+       <th>Апрель</th>
+       <th>Май</th>
+       <th>Июнь</th>
+       <th>Июль</th>
+       <th>Август</th>
+       <th>Сентябрь</th>
+       <th>Октябрь</th>
+       <th>Ноябрь</th>
+       <th>Декабрь</th>
+   </tr>
+    <tr><td>Сено клеверо-тимофеечное 2 кл</td><td> 0 </td><td>176400</td><td>195300</td><td>189000</td>
+    <td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td></tr>
+
+    <tr><td>Солома ржаная</td><td> 0 </td><td>58800</td><td>65100</td><td>63000</td>
+    <td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td></tr>
+
+    <tr><td>Сенаж клеверный 1 кл</td><td> 0 </td><td>294000</td><td>325500</td><td>315000</td>
+    <td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td></tr>
+
+    <tr><td>Свекла кормовая</td><td> 0 </td><td>411600</td><td>455700</td><td>441000</td>
+    <td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td></tr>
+
+    <tr><td>Силос злаков с клевером 1 кл</td><td> 0 </td><td>588000</td><td>651000</td><td>630000</td>
+    <td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td></tr>
+
+    <tr><td>Шрот соевый</td><td> 0 </td><td>23520</td><td>26040</td><td>25200</td>
+    <td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td></tr>
+
+    <tr><td>Ячменная мука</td><td> 0 </td><td>52920</td><td>58590</td><td>56700</td>
+    <td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td></tr>
+
+    <tr><td>Комбикорм К 60-6</td><td> 0 </td><td>82320</td><td>91140</td><td>88200</td>
+    <td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td></tr>
+
+    <tr><td></td><td></td><td>{{ sir_cletchatka.norm }}</td><td>{{ sir_cletchatka.balance }}</td><td>{{ sir_cletchatka.percent }}</td>
+    <td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td></tr>
+
+    <tr><td><strong>Добавки:</strong></td><td>{{ krahmal.racion }}</td><td>{{ krahmal.norm }}</td><td>{{ krahmal.balance }}</td><td>{{ krahmal.percent }}</td>
+    <td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td></tr>
+
+    <tr><td></td><td></td><td>{{ sugar.norm }}</td><td>{{ sugar.balance }}</td><td>{{ sugar.percent }}</td>
+    <td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td></tr>
+
+    <tr><td>Масляный раствор</td><td> 0 </td><td>21,05</td><td>23,31</td><td>22,56</td>
+    <td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td></tr>
+
+    <tr><td>Сера кормовая - 5</td><td> 0 </td><td>74,67</td><td>82,67</td><td>80,01</td>
+    <td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td></tr>
+
+    <tr><td>CuSO4 - 50</td><td> 0 </td><td>24,58</td><td>27,21</td><td>26,34</td>
+    <td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td><td>{{ corm.percent }}</td></tr>
+
+
+  </table>
+
+{% endautoescape %}
